@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+h2 {
+    /* display: none; */
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: .5;
+    /* margin-top: 285px;
+    margin-left: -65px; */
+    color: rgb(153, 238, 25);
+    text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px black;
+}
+body{
+    /* background-color: #111111; */
+    background-image: url('pic-1.png');
+    /* background-image: url('maxresdefault.jpg'); */
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  
+}
+.countdown{
+    /* border: 5px solid red; */
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 65%;
+    left: 48%;
+}
+.heading{
+    /* border: 5px solid red; */
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 48%;
+}
+.box{
+    /* border: 5px solid rgb(149, 255, 0); */
+    width: 10vmin;
+    height: 12vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
+    /* font-size: 16px; */
+}
+
+.box:after{
+    content: "";
+    position: absolute;
+    background-color: hsla(55, 96%, 48%, 0.12);
+    height: 100%;
+    /* border: 5px solid yellow; */
+    width: 50%;
+    left: 0;
+}
+span.num{
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 2px;
+    font-weight: 80000;
+    font-size: 1.5em;
+    color: white;
+}
+span.text{
+    font-size: 1em;
+    background-color: yellow;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0.3em 0;
+    font-weight: 10;
+}
+@media screen and (max-width: 1024px){
+    .countdown{
+        width: 85vw;
+    }
+    .box{
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .countdown{
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .box{
+        width: calc( 50% - 40px );
+        height: 30vmin;
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .countdown{
+        gap: 15px;
+    }
+    .box{
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+    .span.text{
+        font-size: 1.5em;
+    }
+}
+/* a{
+    position: relative;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    width: 100rem;
+    padding: 6px;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+} */
+/* .buttons{
+    
+    border: 5px solid red;
+    width: 25vw;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 10px; */
+    /* position: absolute; */
+    /* transform: translate(-50%,-50%); */
+    /* top: 77%;
+    left: 48%; */
+
+
+.btn{
+    position: absolute;
+    top: 75%;
+    left: 43%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    /* position: relative; */
+    /* margin: 32rem; */
+    background:blueviolet;
+    color: white;
+    width: 10rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: transform 0.3s ease;
+    display: none;
+}
+.btn::after, .btn::before{
+    content: " ";
+  
+    opacity: 0.9;
+    background: black;
+    border-radius: inherit;
+    /* width: 100%;
+    height: 100%; */
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+.btn:hover{
+    background-color:rgb(61, 13, 106);
+    transform: translate(-10px,-10px);
+}
+.btn:hover:after{
+    transform: translate(6px,6px);
+}
+.btn:hover:before{
+    transform: translate(12px,12px);
+}
